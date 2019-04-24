@@ -1,5 +1,5 @@
 # T8MG.io BPM Finder
-# iamkinglouisiv@gmail.com
+# e-mail: louismconley@gmail.com
 
 import librosa as lb
 
