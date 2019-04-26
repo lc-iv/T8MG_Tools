@@ -1,4 +1,4 @@
-# T8MG Voice Search
+# T8MG Voice Search: I use it to search talent
 # Louis     = dict[Python Programmer, Music Publisher, Freelancer]
 # Github    = lc-iv
 # email     = louismcoinley@gmail.com
@@ -15,7 +15,7 @@ engine = pyttsx3.init()
 ua = UserAgent()
 
 # Create search item variable
-search_item = 'Yaunta'  # search query
+search_item = 'Sacramento Songwriters'  # search query
 number_result = 10
 
 # Create url variable directing to search engine + search_item
@@ -50,8 +50,8 @@ for r in result_div:
 # Voice playback
 for item in soup.select(".g"):
     print(item.text)
-    # engine.say(item.text, 'en')
-    # engine.runAndWait()
+    engine.say(item.text, 'en')
+    engine.runAndWait()
     break
 
 
