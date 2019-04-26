@@ -1,12 +1,23 @@
+# T8MG Voice Search
+# Louis     = dict[Python Programmer, Music Publisher, Freelancer]
+# Github    = lc-iv
+# email     = louismcoinley@gmail.com
+# wechat    = k_louis_iv
+
 import requests
 from bs4 import BeautifulSoup
 import pyttsx3
 
+# Create engine for voice playback
 engine = pyttsx3.init()
+
+# Create search item variable
 search_item = 'jungle definition'  # search query
 
+# Create url variable directing to search engine + search_item
 url = "https://www.google.com/search?q=" + search_item
 
+# Pull requests
 response = requests.get(url)
 soup = BeautifulSoup(response.text, "lxml")
 

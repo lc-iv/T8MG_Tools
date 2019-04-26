@@ -1,5 +1,8 @@
 # T8MG.io BPM Finder
-# e-mail: louismconley@gmail.com
+# Louis     = dict[Python Programmer, Music Publisher, Freelancer]
+# Github    = lc-iv
+# email     = louismcoinley@gmail.com
+# wechat    = k_louis_iv
 
 import librosa as lb
 import pyttsx3
