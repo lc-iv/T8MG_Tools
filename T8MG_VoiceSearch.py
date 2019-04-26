@@ -5,23 +5,26 @@
 # wechat    = k_louis_iv
 
 import requests
+
 from bs4 import BeautifulSoup
-import pyttsx3
-import speech_recognition as sr
 from fake_useragent import UserAgent
+
+import speech_recognition as sr
+import pyttsx3
+
 import pandas as pd
 
 # Create engine for voice playback
-engine = pyttsx3.init()
-ua = UserAgent()
-r           = sr.Recognizer()
+engine      = pyttsx3.init()
 mic         = sr.Microphone()
+r           = sr.Recognizer()
 t3x         = r.recognize_google
+ua          = UserAgent()
 
 # Create search item variable
 with mic as source:
     print('What\'s up?!')
-    audio  = r.listen(source)
+    audio   = r.listen(source)
     print('Done!')
 
 text        = t3x(audio)
@@ -58,13 +61,12 @@ for r in result_div:
         continue
 
 # Organize search results into pd df
-Search_Results = pd.DataFrame({'Links': links,
-                               'Titles': titles,
-                               'Descriptions': description
-                               })
-
-# Right now most links are giving 404 errors
-print(Search_Results.head())
+Results     = pd.DataFrame({
+                            'Links': links,
+                            'Titles': titles,
+                            'Descriptions': description
+                            })
+print(Results.head())  # Right now most links are giving 404 errors
 
 # Voice playback
 for item in soup.select(".g"):
