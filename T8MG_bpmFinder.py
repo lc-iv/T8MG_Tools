@@ -17,13 +17,13 @@ y, sr       = lb.load(audio_path, sr=44100)
 onset_env   = lb.onset.onset_strength(y, sr=sr)
 tempo       = lb.beat.tempo(onset_envelope=onset_env, sr=sr)
 tempo       = int(tempo)
+response    = 'The track speed is ' + str(tempo) + ' beats per minute.'
 
-
-engine.say('The track speed is ' + str(tempo) + ' beats per minute.', 'en')
+engine.say(response, 'en')
 engine.runAndWait()
 
 # Print results!
-print('The track speed is ' + str(tempo) + ' beats per minute.')
+print(response)
 
 
 
