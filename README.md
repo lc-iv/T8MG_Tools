@@ -1,1 +1,1 @@
-# music_pub
+# Music Publishing Meets Python Development
