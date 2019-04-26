@@ -20,7 +20,7 @@ t3x         = r.recognize_google
 
 # Create search item variable
 with mic as source:
-    print('Say Something!')
+    print('What\'s up?!')
     audio  = r.listen(source)
     print('Done!')
 
@@ -44,8 +44,8 @@ description = []
 for r in result_div:
     # Checks if each element is present, else, raise exception
     try:
-        link = r.find('a', href=True)
-        title = r.find('h3', attrs={'class': 'r'}).get_text()
+        link        = r.find('a', href=True)
+        title       = r.find('h3', attrs={'class': 'r'}).get_text()
         description = r.find('span', attrs={'class': 'st'}).get_text()
 
         # Check to make sure everything is present before appending
