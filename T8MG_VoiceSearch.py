@@ -20,7 +20,7 @@ url = "https://www.google.com/search?q=" + search_item
 # Pull requests
 response = requests.get(url)
 # soup = BeautifulSoup(response.text, "lxml")
-soup = BeautifulSoup(response.content, "lxml")
+soup = BeautifulSoup(response.content, "html.parser")
 
 # I want to give a list or pd df of first 10 page results
 # I want the text portion of the top result to be displayed
@@ -29,8 +29,8 @@ soup = BeautifulSoup(response.content, "lxml")
 
 for item in soup.select(".st"):
     print(item.text)
-    engine.say(item.text, 'en')
-    engine.runAndWait()
+    # engine.say(item.text, 'en')
+    # engine.runAndWait()
     break
 
 
