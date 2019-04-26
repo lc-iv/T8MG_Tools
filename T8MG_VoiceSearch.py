@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import pyttsx3
 
 engine = pyttsx3.init()
-search_item = 'liquor definition'  # search query
+search_item = 'jungle definition'  # search query
 
 url = "https://www.google.com/search?q=" + search_item
 
