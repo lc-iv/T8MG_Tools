@@ -43,10 +43,10 @@ print(hash_blocks([block_genesis, block_2, block_3]))
 
 print('Updating Blocks')
 
-dg12 = ['joe', 'jeff', 'jeremy', 'jacob']
+NewData_List = ['newdata_1', 'newdata_2', 'newdata_3', 'newdata_4']
 
-block_2['data_list'].append(dg12)
-block_3['data_list'].append(dg12[:2])
+block_2['data_list'].append(NewData_List)
+block_3['data_list'].append(NewData_List[:2])
 
 print('After being tampered')
 print(hash_blocks([block_genesis, block_2, block_3]))
