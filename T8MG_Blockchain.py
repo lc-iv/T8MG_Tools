@@ -8,7 +8,7 @@
 import hashlib
 import json
 
-
+# Looking for ways for blocks to self create in an optimizing manner
 block_genesis   = {
                    'prev_hash': None,
                    'data_list': [4, 2, 11, 3]
